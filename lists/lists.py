@@ -33,4 +33,3 @@ online_players.remove("Chevrefeuille")
 print(online_players)
 
 # .clear pour nettoyer la liste au complet
-

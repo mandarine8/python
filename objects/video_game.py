@@ -1,4 +1,5 @@
-# class pour faire le moule, l'obejt
+from weapon import Weapon
+# class pour faire le moule, l'objet
 class Player:
   # a l'interieur on met les attributs, les caracteristiques, pour les fixer
   # pseudo = "Tchoup"
@@ -13,6 +14,7 @@ class Player:
     self.pseudo = pseudo
     self.health = health
     self.attack = attack
+    self.weapon = None
 
     print("Bienvenue au joueur", pseudo, " / Points de vie: ", health, " / Attaque: ", attack)
 
@@ -36,6 +38,24 @@ class Player:
   def attack_player(self, target_player):
     target_player.damage(self.attack)
 
+    # si le joueur a une arme
+    #if self.has_weapon():
+        # ajoute les dégats de l'arme au point d'attaque du joueur
+        #damage += self.weapon.get_damage_amount()
+
+    #target_player.damage(damage)
+
+  # méthode pour changer l'arme du joueur
+  #def set_weapon(self, weapon):
+      #self.weapon = weapon
+
+  # méthode pour verifier si le joueur a une arme
+  #def has_weapon(self):
+      #return self.weapon is not None
+
+
+#knife = Weapon("Couteau", 3)
+
 
 
 # on sort de ce moule et on crée une nouvelle instance de l'objet player
@@ -53,6 +73,3 @@ player1.attack_player(player2)
 print(player1.get_pseudo(), "attaque", player2.get_pseudo())
 print("Bienvenue au joueur", player1.get_pseudo(), " / Points de vie: ", player1.get_health(), " / Attaque: ", player1.get_attack_value())
 print("Bienvenue au joueur", player2.get_pseudo(), " / Points de vie: ", player2.get_health(), " / Attaque: ", player2.get_attack_value())
-
-
-
